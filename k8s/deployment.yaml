@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: sample-app
-        image: venkatnivi062/sample-ci-cd-app:latest
+        image: venkatnivi062/sample-ci-cd-app:81272958b51d6ad2a0e284c1dd753c1823df82cc
         ports:
         - containerPort: 5000
