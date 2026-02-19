@@ -30,8 +30,15 @@ jobs:
       run: |
         kubectl apply -f k8s/deployment.yaml
         kubectl apply -f k8s/service.yaml
+        
+    - name: Force rollout restart
+      run: |
+        kubectl rollout restart deployment sample-app
 
-    - name: Wait for rollout
-      run: kubectl rollout status deployment/sample-app
+    - name: Verify rollout
+      run: |
+       kubectl rollout status deployment sample-app
 
-      # testing ends
+    #- name: Wait for rollout
+     # run: kubectl rollout status deployment/sample-app
+
