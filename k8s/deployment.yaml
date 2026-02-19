@@ -15,5 +15,6 @@ spec:
       containers:
       - name: sample-app
         image: venkatnivi062/sample-ci-cd-app:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
